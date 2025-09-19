@@ -1,0 +1,28 @@
+ => ERROR [7/8] RUN poetry install --no-root --no-dev                                                                          2.0s 
+------
+ > [7/8] RUN poetry install --no-root --no-dev:
+1.246 Creating virtualenv tg-bot-9TtSrW0h-py3.12 in /root/.cache/pypoetry/virtualenvs
+1.760
+1.760 The option "--no-dev" does not exist
+------
+Dockerfile:16
+
+--------------------
+
+  14 |     RUN apt-get update
+
+  15 |     RUN apt-get install -y build-essential
+
+  16 | >>> RUN poetry install --no-root --no-dev
+
+  17 |
+
+  18 |     # Copy the rest of the application's source code from the host to the image's filesystem.
+
+--------------------
+
+failed to solve: process "/bin/sh -c poetry install --no-root --no-dev" did not complete successfully: exit code: 1
+
+
+
+View build details: docker-desktop://dashboard/build/default/default/pt5009nlpiiiysesciwplcvtf
